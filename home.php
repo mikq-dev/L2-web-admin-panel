@@ -33,18 +33,6 @@ if(isset($_GET["option"])&&($_GET["get_access"])){
  
  }
 }
-
-if(isset($_GET["option"])&&($_GET["get_char_id"])){
-
-	$option = $_GET["option"];
-	
- if($option == char_items){
-	
-	$get_charId = (int)$_GET["get_char_id"];
-		char_items($get_charId);
-
- } 
-}
 if((isset($_GET["char_id"])&&($_GET["option"]))){
  $option = $_GET["option"];
 	
