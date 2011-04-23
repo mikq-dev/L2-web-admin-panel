@@ -1,0 +1,42 @@
+#my_chars {
+font-family:Calibri;
+background:#fff;
+border:1px dotted #222;
+width:700px;
+
+}
+#my_chars_titles td {
+
+background:#fff;
+border:1px dotted #222;
+width:700px;
+
+
+
+}
+#menu_h a {
+
+color:#fff;
+background:black;
+padding:4px 4px 4px 4px;
+text-decoration:none;
+
+}
+#menu_h a:hover {
+
+color:#fff;
+background:black;
+padding:4px 4px 4px 4px;
+text-decoration:underline;
+
+}
+#menu_h {
+
+margin:4px 4px 10px 5px;
+
+}
+#add_item-t {
+background:#fff;
+font-family:Calibri;
+	
+}
