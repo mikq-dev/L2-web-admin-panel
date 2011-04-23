@@ -24,12 +24,14 @@
 		 
 		 $_SESSION["login"] = $login_check["login"];
 		 if($login_check["accessLevel"] == 127){
-		 $_SESSION["pass_key_id"] = $login_check["accessLevel"];
+			$_SESSION["pass_key_id"] = $login_check["accessLevel"];
 		 }else{echo 'Access Leve > 127';}
 		 
 		 } else if(($login != $login_check["login"])){echo 'Login Error';}
 		   else if (($pass != $login_check["password"])){echo 'Password Error';}
+		   mysql_close($sql);
 		}
+		
 	}	
 		
 	$script = $_SERVER["SCRIPT_NAME"].'?auth=1';	
@@ -72,7 +74,7 @@
 
 </td>
  <td> 
-	<input type="submit" value="Войти" />
+	<input type="submit" value="Log IN" />
  </td>
 </tr> 
 </form>
