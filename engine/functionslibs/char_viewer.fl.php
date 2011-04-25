@@ -8,16 +8,16 @@ echo '<table align="center" id="my_chars">
 	</tr> <?php
  
    $sql = mysql_query("SELECT * from characters");
-	  while($_mychar = mysql_fetch_assoc($sql)){ ?>
+	  while($chars = mysql_fetch_assoc($sql)){ ?>
 	
 	 
 	  
 	<tr>
-	  <td align="left"> <a href="?option=char_info&get_char_id=<?=$_mychar["charId"] ?>"><?=$_mychar["char_name"] ?></a></td> 
-	    <td align="left"> <a href="?option=account_info&get_account=<?=$_mychar["account_name"] ?>"><?=$_mychar["account_name"] ?></a></td> 
-	  <td align="center"><?=$_mychar["level"] ?></td>
+	  <td align="left"> <a href="?option=char_info&get_char_id=<?=$chars["charId"] ?>"><?=$chars["char_name"] ?></a></td> 
+	    <td align="left"> <a href="?option=account_info&get_account=<?=$chars["account_name"] ?>"><?=$chars["account_name"] ?></a></td> 
+	  <td align="center"><?=$chars["level"] ?></td>
 	  <td align="center">
-	  <?php switch($_mychar["online"]){
+	  <?php switch($chars["online"]){
 		
 		case 1:
 			echo '<font color="green">OnLine</font>';
@@ -31,9 +31,9 @@ echo '<table align="center" id="my_chars">
 		<td align="center">
 		<form method="POST">
 		<select name="access">
-		 <option value="1" <?php if($_mychar["accesslevel"] == 1){echo 'selected="yes"';} ?>>Administrator
-		 <option value="0" <?php if($_mychar["accesslevel"] == 0){echo 'selected="yes"';} ?>>Player
-		<option value="-1" <?php if($_mychar["accesslevel"] == -1){echo 'selected="yes"';} ?>>Banned
+		 <option value="1" <?php if($chars["accesslevel"] == 1){echo 'selected="yes"';} ?>>Administrator
+		 <option value="0" <?php if($chars["accesslevel"] == 0){echo 'selected="yes"';} ?>>Player
+		<option value="-1" <?php if($chars["accesslevel"] == -1){echo 'selected="yes"';} ?>>Banned
 		</select>
 		</form>
 		</td>
@@ -45,7 +45,7 @@ echo '<table align="center" id="my_chars">
 		 <option value="edit_title" onclick="edit_title();">Set title</option>
 		<option value="add_noble">Nobless </option>
 		</select>
-		<input type="hidden" name="char_id" value="<?=$_mychar["charId"] ?>" />
+		<input type="hidden" name="char_id" value="<?=$chars["charId"] ?>" />
 		</td>
 		<td>
 		<input type="submit" style="border:1px solid #222;" value="Ok" />
@@ -54,8 +54,10 @@ echo '<table align="center" id="my_chars">
 	</tr>
 	
 <?php
-  }
+ }
+  
   echo '</table>
    ';
+   
 }
 ?>

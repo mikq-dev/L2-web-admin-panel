@@ -1,1 +1,0 @@
-<?php $start_page = "L2 W.A.P 1.02" ?>

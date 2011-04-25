@@ -1,3 +1,18 @@
+html,body{
+
+
+background:url(../images/bg.png);
+
+}
+
+#main 
+{
+width:950px;
+margin:auto;
+
+}
+
+
 #my_chars {
 font-family:Calibri;
 background:#fff;
@@ -8,35 +23,76 @@ width:700px;
 #my_chars_titles td {
 
 background:#fff;
-border:1px dotted #222;
+border-bottom:1px solid #222;
+border-right:1px solid #222;
 width:700px;
 
 
 
 }
-#menu_h a {
 
-color:#fff;
-background:black;
-padding:4px 4px 4px 4px;
-text-decoration:none;
+#left_menu
+{
 
-}
-#menu_h a:hover {
+float:left;
 
-color:#fff;
-background:black;
-padding:4px 4px 4px 4px;
-text-decoration:underline;
 
 }
-#menu_h {
 
-margin:4px 4px 10px 5px;
+#tool_bar_top
+{
+
+
+width:950px;
+height:75px;
+float:left;
+background:url(../images/profile/bg.png);
 
 }
+
+#content
+{
+padding:5px 5px 5px 5px;
+float:left;
+width:680px;
+height:490px;
+background:url(../images/main_bg.png);
+
+}
+
 #add_item-t {
 background:#fff;
 font-family:Calibri;
 	
+}
+#login {
+
+width:420px;
+height:130px;
+background:url(../images/login_S.png);
+padding:170px 0px 50px 170px;
+margin:auto;
+margin-top:150px;
+}
+
+#login_form {
+
+width:200px;
+height:30px;
+background:none;
+padding:3px 3px 3px 3px;
+border-bottom:1px solid #333;
+}
+
+#text_login_form {
+
+font-family:Calibri;
+font-size:17px;
+
+}
+
+#add_item_ok {
+background:url(../images/icons/accept.png);
+width:25px;
+height:25px;
 }
