@@ -1,6 +1,0 @@
-php_value max_execution_time 30
-php_value upload_max_filesize 1056000
-php_value post_max_size 1056000
-php_value file_uploads On
-php_value max_input_time 10
-LimitRequestBody 1056000
